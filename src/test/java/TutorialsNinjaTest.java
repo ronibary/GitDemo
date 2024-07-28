@@ -14,7 +14,8 @@ public class TutorialsNinjaTest extends BaseTest {
         Assert.isTrue(tnPage.verifyCurrencyDropDownExists(),"currency drop down not exists in the page !");
         tnPage.searchForIpod("iPod");
         Boolean isProductListSorted = tnPage.isProductsListSorted();
-        Assert.isTrue(isProductListSorted,"product list is not sorted !.");
+		Assert.isTrue(isProductListSorted,"product list is not sorted !.");
+        Assert.isTrue(isProductListSorted,"list is not sorted , user 2");
     }
 
     @Test
