@@ -16,6 +16,11 @@ public class TutorialsNinjaTest extends BaseTest {
         Boolean isProductListSorted = tnPage.isProductsListSorted();
 		Assert.isTrue(isProductListSorted,"product list is not sorted !.");
         Assert.isTrue(isProductListSorted,"list is not sorted , user 2");
+		
+		// add some assertions
+		Assert.isTrue(isProductListSorted,"list is not sorted ... , user 1");
+		Assert.isTrue(isProductListSorted,"list is not sorted ..., user 1");
+		Assert.isTrue(isProductListSorted,"list is not sorted ..., user 1");
     }
 
     @Test
@@ -30,6 +35,8 @@ public class TutorialsNinjaTest extends BaseTest {
         List<IPod> ipods = tnPage.getIPodList();
         int min = ipods.stream().mapToInt(IPod::getPrice).min().orElse(Integer.MAX_VALUE);
         int max = ipods.stream().mapToInt(IPod::getPrice).max().orElse(Integer.MIN_VALUE);
+		System.println("end of test - ipodStorage .");
+		
     }
 
 }
